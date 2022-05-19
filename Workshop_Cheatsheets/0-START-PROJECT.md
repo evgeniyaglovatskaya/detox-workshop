@@ -18,7 +18,7 @@ Most likely you've done it already, but just to be sure😄
 
 ```sh
 // Install dependencies
-yarn install
+npm install
 
 // Install pods
 cd ios && pod install

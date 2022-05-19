@@ -2,7 +2,69 @@
 
 ## Update Detox configuration file
 
-Add debug and release apps configuration for both platforms. See example [here](https://github.com/wix/Detox/blob/master/examples/demo-react-native/detox.config.js).
+Add debug and release apps configuration for both platforms. 
+
+```json
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "skipLegacyWorkersInjection": true,
+  "apps": {
+    "ios.release": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/DetoxWorkshop.app",
+      "build": "xcodebuild -workspace ios/DetoxWorkshop.xcworkspace -configuration release -scheme DetoxWorkshop -sdk iphonesimulator -derivedDataPath ios/build"
+    },
+    "ios.debug": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/DetoxWorkshop.app",
+      "build": "xcodebuild -workspace ios/DetoxWorkshop.xcworkspace -scheme DetoxWorkshop -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
+    },
+    "android.debug": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android ; ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug ; cd -"
+    },
+    "android.release": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+      "build": "cd android ; ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release ; cd -"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 12"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "Pixel_5_API_30"
+      }
+    }
+  },
+  "configurations": {
+    "ios.sim.release": {
+      "device": "simulator",
+      "app": "ios.release"
+    },
+    "ios.sim.debug": {
+      "device": "simulator",
+      "app": "ios.debug"
+    },
+    "android.emu.debug": {
+      "device": "emulator",
+      "app": "android.debug"
+    },
+    "android.emu.release": {
+      "device": "emulator",
+      "app": "android.release"
+    }
+  }
+}
+```
 
 Remember to update: 
 - name of your project for iOS build and binary path
@@ -52,6 +114,7 @@ In your app’s `buildscript` (i.e. `android/app/build.gradle`) add this in `dep
 dependencies {
     // ...
     androidTestImplementation('com.wix:detox:+')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 ```
 
@@ -106,6 +169,8 @@ Update app's `AndroidManifest.xml`
 
 ```sh
 detox build -c <configuration name>
+
+npx react-native start
 
 detox test -c <configuration name>
 ```

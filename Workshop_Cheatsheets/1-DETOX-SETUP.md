@@ -4,13 +4,13 @@
 ## Add Detox
 
 ```sh
-yarn add detox -D
+npm install detox --save-dev
 ```
 
 ## Add jest
 
 ```sh
-yarn add jest -D
+npm install -D "jest@>=27.2.5"
 ```
 
 ## Init Detox
