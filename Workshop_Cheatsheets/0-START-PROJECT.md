@@ -6,7 +6,7 @@ Before starting anything make sure you have Android and iOS development environm
 
 - 📚 [React Native Environment Setup Guide](https://reactnative.dev/docs/next/environment-setup)
 
-Note: we will used React Native CLI for this project
+Note: we will used React Native CLI for this project and node version 14
 
 ## Clone this project
 

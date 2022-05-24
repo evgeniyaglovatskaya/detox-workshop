@@ -1,5 +1,7 @@
 # Configuration
 
+[See documentation here.](https://wix.github.io/Detox/docs/api/configuration)
+
 ## Update Detox configuration file
 
 Add debug and release apps configuration for both platforms. 

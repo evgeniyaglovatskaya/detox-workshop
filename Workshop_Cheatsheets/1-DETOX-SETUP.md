@@ -1,7 +1,12 @@
 # Detox Setup
 
+## Install Detox Command Line Tools
 
-## Add Detox
+```sh
+npm install -g detox-cli
+```
+
+## Add Detox to your project
 
 ```sh
 npm install detox --save-dev
