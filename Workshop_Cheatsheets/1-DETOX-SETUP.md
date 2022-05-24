@@ -5,6 +5,14 @@
 ```sh
 npm install -g detox-cli
 ```
+## Install applesimutils
+
+A collection of utils for Apple simulators, Detox uses it to query and communicate with the simulator.
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+```
 
 ## Add Detox to your project
 
