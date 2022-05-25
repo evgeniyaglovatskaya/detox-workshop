@@ -6,7 +6,7 @@ In case you've never developed React Native apps before - you'll need to install
 
 - 📚 [React Native Environment Setup Guide](https://reactnative.dev/docs/next/environment-setup)
 
-![React Native Dev Env Setup](./rn-env-setup.png)
+![React Native Dev Env Setup](./rn-env.png)
 
 Note: we will **node version 14** for this project.
 
