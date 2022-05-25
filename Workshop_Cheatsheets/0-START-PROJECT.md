@@ -15,7 +15,7 @@ Most likely you've done it already, but just to be sure😄
 - 🔗 [Repository link](https://github.com/evgeniyaglovatskaya/detox-demo-app)
 
 ```sh
-git clone git@github.com:evgeniyaglovatskaya/detox-workshop.git
+git clone git@github.com:evgeniyaglovatskaya/detox-workshop.git && cd detox-workshop
 ```
 
 ## Install Detox Command Line Tools
