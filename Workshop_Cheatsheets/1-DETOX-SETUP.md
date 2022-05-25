@@ -9,7 +9,7 @@ npm install detox --save-dev
 ## Add jest
 
 ```sh
-npm install -D "jest@>=27.2.5"
+npm install -D "jest@28"
 ```
 
 ## Init Detox
