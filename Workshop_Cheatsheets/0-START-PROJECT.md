@@ -2,11 +2,13 @@
 
 ## Prerequisites
 
-Before starting anything make sure you have Android and iOS development environment installed. 
+In case you've never developed React Native apps before - you'll need to install Android and iOS development environment. Open link below, select **React Native CLI** tab and install everything needed for iOS and Android.
 
 - 📚 [React Native Environment Setup Guide](https://reactnative.dev/docs/next/environment-setup)
 
-Note: we will used React Native CLI for this project and node version 14.
+![React Native Dev Env Setup](./rn-env-setup.png)
+
+Note: we will **node version 14** for this project.
 
 ## Clone this project
 
@@ -55,3 +57,5 @@ emulator @emulatorNameFromPrevious
 // Starting Android
 npx react-native run-android
 ```
+
+If everything went well - you will see app with movies running in iOS and Android simulators.
