@@ -6,7 +6,7 @@ Before starting anything make sure you have Android and iOS development environm
 
 - 📚 [React Native Environment Setup Guide](https://reactnative.dev/docs/next/environment-setup)
 
-Note: we will used React Native CLI for this project and node version 14
+Note: we will used React Native CLI for this project and node version 14.
 
 ## Clone this project
 
@@ -14,11 +14,25 @@ Most likely you've done it already, but just to be sure😄
 
 - 🔗 [Repository link](https://github.com/evgeniyaglovatskaya/detox-demo-app)
 
+## Install Detox Command Line Tools
+
+```sh
+npm install -g detox-cli
+```
+## Install applesimutils
+
+A collection of utils for Apple simulators, Detox uses it to query and communicate with the simulator.
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+```
+
 ## Install dependencies
 
 ```sh
 // Install dependencies
-npm install
+cd DetoxWorkshop && npm install
 
 // Install pods
 cd ios && pod install
