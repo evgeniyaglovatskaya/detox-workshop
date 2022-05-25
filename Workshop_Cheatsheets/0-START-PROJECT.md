@@ -19,7 +19,7 @@ Most likely you've done it already, but just to be sure😄
 ```sh
 npm install -g detox-cli
 ```
-## Install applesimutils
+## Install applesimutils (iOS only)
 
 A collection of utils for Apple simulators, Detox uses it to query and communicate with the simulator.
 
@@ -47,7 +47,7 @@ npx react-native start
 // Starting iOS (should launch simulator automatically)
 npx react-native run-ios
 
-// Launch Android emulator
+// Launch Android emulator (note: it is better to use AOSP emulators)
 emulator -list-avds
 
 emulator @emulatorNameFromPrevious
