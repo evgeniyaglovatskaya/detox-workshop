@@ -8,6 +8,11 @@ Hello everyone! This is a basic React Native App developed for the [Detox](https
 
 To work with this project you should have React Native development environment installed and **node version 14**.
 
+## Prerequisites 
+
+- iOS/Android: MacOS Catalina or newer
+- Android only: Linux
+
 ## Branches 
 
 - **master** - application with basic UI
