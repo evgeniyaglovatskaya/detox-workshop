@@ -14,7 +14,7 @@ Note: we will **node version 14** for this project.
 
 Most likely you've done it already, but just to be sure😄
 
-- 🔗 [Repository link](https://github.com/evgeniyaglovatskaya/detox-demo-app)
+- 🔗 [Repository link](https://github.com/evgeniyaglovatskaya/detox-workshop)
 
 ## Install Detox Command Line Tools
 
