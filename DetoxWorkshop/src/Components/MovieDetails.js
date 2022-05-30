@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import {IMAGE_POSTER_URL} from '../config';
-import {GET} from '../Services/API';
+import { IMAGE_POSTER_URL } from '../config';
+import { GET } from '../Services/API';
 import Styles from '../Styles';
 import Loader from './Loader';
 import TrendingMovies from './TrendingMovies';
@@ -37,18 +37,19 @@ const MovieDetails = props => {
   };
 
   return (
-    <ScrollView style={Styles.sectionBg}>
+    <ScrollView style={Styles.sectionBg} testID="MovieDetailsScrollViewID">
       {loading ? (
         <Loader />
       ) : (
         <View>
           <View>
             <Image
-              source={{uri: `${IMAGE_POSTER_URL}${details.backdrop_path}`}}
+              source={{ uri: `${IMAGE_POSTER_URL}${details.backdrop_path}` }}
               style={Styles.imageBg}
+              testID="MovieDetailsImageID"
             />
           </View>
-          <Text style={Styles.detailsMovieTitle}>{details.original_title}</Text>
+          <Text style={Styles.detailsMovieTitle}>{details.original_title} testID="MovieDetailsTitleID"</Text>
           {details.homepage ? (
             <View style={Styles.linkContainer}>
               <TouchableOpacity
@@ -80,7 +81,7 @@ const MovieDetails = props => {
           </View>
 
           <Text style={Styles.heading}>GENRE</Text>
-          <View style={{display: 'flex', flexDirection: 'row'}}>
+          <View style={{ display: 'flex', flexDirection: 'row' }}>
             {getGenre()}
           </View>
 

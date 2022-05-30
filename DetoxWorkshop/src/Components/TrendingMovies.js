@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {View, Image, FlatList, Text, TouchableOpacity} from 'react-native';
-import {POSTER_IMAGE} from '../config';
-import {GET} from '../Services/API';
+import React, { useEffect, useState } from 'react';
+import { View, Image, FlatList, Text, TouchableOpacity } from 'react-native';
+import { POSTER_IMAGE } from '../config';
+import { GET } from '../Services/API';
 import Styles from '../Styles';
 import Loader from './Loader';
 
@@ -38,18 +38,19 @@ const TrendingMovies = props => {
   );
 };
 
-const displayMovies = ({item}, props) => {
+const displayMovies = ({ item }, props) => {
   return (
     <TouchableOpacity
       onPress={() => {
-        props.navigation.push('movieDetails', {movieId: item.id});
+        props.navigation.push('movieDetails', { movieId: item.id });
       }}
-      style={{marginHorizontal: 10}}>
+      style={{ marginHorizontal: 10 }}>
       <Image
-        source={{uri: `${POSTER_IMAGE}${item.poster_path}`}}
+        source={{ uri: `${POSTER_IMAGE}${item.poster_path}` }}
         style={Styles.posterImage}
+        testID="MovieImageID"
       />
-      <Text style={Styles.movieTitle}>{item.original_title}</Text>
+      <Text style={Styles.movieTitle} testID="MovieTitleID">{item.original_title}</Text>
     </TouchableOpacity>
   );
 };
