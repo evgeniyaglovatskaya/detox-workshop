@@ -16,7 +16,7 @@ const Home = props => {
       />
       <TrendingPeople title="Trending People" url="/trending/person/week" />
       <TrendingMovies
-        title="Trending Movies"
+        title="Other Movies"
         url="/movie/top_rated"
         navigation={props.navigation}
       />
