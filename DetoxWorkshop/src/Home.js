@@ -4,11 +4,13 @@ import DiscoverMovies from './Components/DiscoverMovies';
 import Styles from './Styles';
 import TrendingPeople from './Components/TrendingPeople';
 import TrendingMovies from './Components/TrendingMovies';
+import YellowButton from './Components/YellowButton';
 
 const Home = props => {
   return (
     <ScrollView style={Styles.sectionBg}>
       <DiscoverMovies navigation={props.navigation} />
+      <YellowButton />
       <TrendingMovies
         title="Trending Movies"
         url="/movie/top_rated"

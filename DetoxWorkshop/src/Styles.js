@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import Constants from './Constants';
 
 const deviceHeight = Dimensions.get('window').height;
@@ -89,6 +89,19 @@ const Styles = StyleSheet.create({
     color: Constants.textColor,
     fontSize: 16,
   },
+  buttonText: {
+    fontSize: 18,
+    color: "black",
+    alignSelf: "center"
+  },
+  buttonContainer: {
+    backgroundColor: Constants.secondaryColor,
+    borderRadius: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    marginVertical: 10,
+    marginHorizontal: 10
+  }
 });
 
 export default Styles;
