@@ -49,7 +49,7 @@ const MovieDetails = props => {
               testID="MovieDetailsImageID"
             />
           </View>
-          <Text style={Styles.detailsMovieTitle}>{details.original_title} testID="MovieDetailsTitleID"</Text>
+          <Text style={Styles.detailsMovieTitle} testID="MovieDetailsTitleID">{details.original_title}</Text>
           {details.homepage ? (
             <View style={Styles.linkContainer}>
               <TouchableOpacity
