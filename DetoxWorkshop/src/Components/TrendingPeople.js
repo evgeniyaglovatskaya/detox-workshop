@@ -25,7 +25,7 @@ const TrendingPeople = props => {
         <Loader />
       ) : (
         <View>
-          <Text style={Styles.heading} testID="TrendingPeopleTitleID">{props.title}</Text>
+          <Text style={Styles.heading}>{props.title}</Text>
           <FlatList
             keyExtractor={item => item.id}
             data={people}

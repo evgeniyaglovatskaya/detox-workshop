@@ -15,12 +15,14 @@ const Home = props => {
         title="Trending Movies"
         url="/movie/top_rated"
         navigation={props.navigation}
+        testID='TrendingMovies'
       />
       <TrendingPeople title="Trending People" url="/trending/person/week" />
       <TrendingMovies
         title="Other Movies"
         url="/movie/top_rated"
         navigation={props.navigation}
+        testID='OtherMovies'
       />
     </ScrollView>
   );

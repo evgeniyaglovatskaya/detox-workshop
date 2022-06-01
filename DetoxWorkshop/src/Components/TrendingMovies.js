@@ -20,7 +20,7 @@ const TrendingMovies = props => {
   }, []);
 
   return (
-    <View>
+    <View testID={props.testID}>
       {loading ? (
         <Loader />
       ) : (
@@ -48,9 +48,9 @@ const displayMovies = ({ item }, props) => {
       <Image
         source={{ uri: `${POSTER_IMAGE}${item.poster_path}` }}
         style={Styles.posterImage}
-        testID="MovieImageID"
+        testID="MovieImage"
       />
-      <Text style={Styles.movieTitle} testID="MovieTitleID">{item.original_title}</Text>
+      <Text style={Styles.movieTitle} testID="MovieTitle">{item.original_title}</Text>
     </TouchableOpacity>
   );
 };
