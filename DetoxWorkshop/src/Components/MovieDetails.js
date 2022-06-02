@@ -11,7 +11,7 @@ import { IMAGE_POSTER_URL } from '../config';
 import { GET } from '../Services/API';
 import Styles from '../Styles';
 import Loader from './Loader';
-import TrendingMovies from './TrendingMovies';
+import MoviesGallery from './MoviesGallery';
 import TrendingPeople from './TrendingPeople';
 
 const MovieDetails = props => {
@@ -91,7 +91,7 @@ const MovieDetails = props => {
             isForPage="details"
           />
 
-          <TrendingMovies
+          <MoviesGallery
             title="SIMILAR MOVIES"
             navigation={props.navigation}
             url={`/movie/${props.route.params.movieId}/similar`}
