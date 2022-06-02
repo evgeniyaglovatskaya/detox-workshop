@@ -2,31 +2,58 @@
 
 Many great examples can be found [here](https://github.com/wix/Detox/tree/master/detox/test/e2e).
 
-## Matchers
+## Documentation
 
-[See documentation here.](https://wix.github.io/Detox/docs/api/matchers)
+- [Matchers](https://wix.github.io/Detox/docs/api/matchers)
+- [Actions](https://wix.github.io/Detox/docs/api/actions-on-element)
+- [Expectations](https://wix.github.io/Detox/docs/api/expect)
 
-## Adding testID
+## Best practices
+
+- Add testID
 
 It is always the best idea to match your element by something unique. We recommend using testID prop for this purpose if possible. 
-
-Note: not all React Native components support testID prop. 
 
 ```jsx
 <View>
   <TouchableOpacity testID='MyUniqueId123'>
-    <Text>Some button</Text>
+    <Text>Some text</Text>
   </TouchableOpacity>
 </View>
 ```
 
-## Actions
+- Pass testID to native components
 
-[See documentation here.](https://wix.github.io/Detox/docs/api/actions-on-element)
+Not all React Native components support testID prop, so you'll need to pass them to your native components. 
 
-## Expectations
+```jsx
+<TrendingMovies testID='OtherMovies'/>
+```
+```jsx
+<View testID={props.testID}>
+    <Text>Some button</Text>
+</View>
+  ```
 
-[See documentation here.](https://wix.github.io/Detox/docs/api/expect)
+- Generate testID for repetitive components
+
+```jsx
+<View testID=`${props.title}ID`>
+    <Text>Some button</Text>
+</View>
+  ```
+
+- Combine matchers for repetitive components
+
+```js
+element(by.id('child').withAncestor(by.id('parent')));
+```
+```js
+element(by.id('uniqueId').and(by.text('some text')));
+```
+```js
+element(by.id('Product')).atIndex(2);
+```
 
 ## Failed test
 
