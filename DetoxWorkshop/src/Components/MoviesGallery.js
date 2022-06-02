@@ -5,7 +5,7 @@ import { GET } from '../Services/API';
 import Styles from '../Styles';
 import Loader from './Loader';
 
-const TrendingMovies = props => {
+const MoviesGallery = props => {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState();
 
@@ -20,7 +20,7 @@ const TrendingMovies = props => {
   }, []);
 
   return (
-    <View>
+    <View testID={props.testID}>
       {loading ? (
         <Loader />
       ) : (
@@ -48,11 +48,11 @@ const displayMovies = ({ item }, props) => {
       <Image
         source={{ uri: `${POSTER_IMAGE}${item.poster_path}` }}
         style={Styles.posterImage}
-        testID="MovieImageID"
+        testID={props.testID + '.image'}
       />
-      <Text style={Styles.movieTitle} testID="MovieTitleID">{item.original_title}</Text>
+      <Text style={Styles.movieTitle} testID={props.testID + '.title'}>{item.original_title}</Text>
     </TouchableOpacity>
   );
 };
 
-export default TrendingMovies;
+export default MoviesGallery;

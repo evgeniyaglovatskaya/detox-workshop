@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import DiscoverMovies from './Components/DiscoverMovies';
 import Styles from './Styles';
 import TrendingPeople from './Components/TrendingPeople';
-import TrendingMovies from './Components/TrendingMovies';
+import MoviesGallery from './Components/MoviesGallery';
 import YellowButton from './Components/YellowButton';
 
 const Home = props => {
@@ -11,16 +11,18 @@ const Home = props => {
     <ScrollView style={Styles.sectionBg}>
       <DiscoverMovies navigation={props.navigation} />
       <YellowButton />
-      <TrendingMovies
+      <MoviesGallery
         title="Trending Movies"
         url="/movie/top_rated"
         navigation={props.navigation}
+        testID='TrendingMovies'
       />
       <TrendingPeople title="Trending People" url="/trending/person/week" />
-      <TrendingMovies
+      <MoviesGallery
         title="Other Movies"
         url="/movie/top_rated"
         navigation={props.navigation}
+        testID='OtherMovies'
       />
     </ScrollView>
   );

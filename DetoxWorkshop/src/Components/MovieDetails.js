@@ -11,7 +11,7 @@ import { IMAGE_POSTER_URL } from '../config';
 import { GET } from '../Services/API';
 import Styles from '../Styles';
 import Loader from './Loader';
-import TrendingMovies from './TrendingMovies';
+import MoviesGallery from './MoviesGallery';
 import TrendingPeople from './TrendingPeople';
 
 const MovieDetails = props => {
@@ -37,7 +37,7 @@ const MovieDetails = props => {
   };
 
   return (
-    <ScrollView style={Styles.sectionBg} testID="MovieDetailsScrollViewID">
+    <ScrollView style={Styles.sectionBg} testID="MovieDetailsScrollView">
       {loading ? (
         <Loader />
       ) : (
@@ -46,10 +46,10 @@ const MovieDetails = props => {
             <Image
               source={{ uri: `${IMAGE_POSTER_URL}${details.backdrop_path}` }}
               style={Styles.imageBg}
-              testID="MovieDetailsImageID"
+              testID="MovieDetailsImage"
             />
           </View>
-          <Text style={Styles.detailsMovieTitle} testID="MovieDetailsTitleID">{details.original_title}</Text>
+          <Text style={Styles.detailsMovieTitle} testID="MovieDetailsTitle">{details.original_title}</Text>
           {details.homepage ? (
             <View style={Styles.linkContainer}>
               <TouchableOpacity
@@ -91,7 +91,7 @@ const MovieDetails = props => {
             isForPage="details"
           />
 
-          <TrendingMovies
+          <MoviesGallery
             title="SIMILAR MOVIES"
             navigation={props.navigation}
             url={`/movie/${props.route.params.movieId}/similar`}
