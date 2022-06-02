@@ -24,7 +24,7 @@ It is always the best idea to match your element by something unique. We recomme
 
 - Pass testID to native components
 
-Not all React Native components support testID prop, so you'll need to pass them to your native components. 
+Custom React Native components are not aware of testIDs you pass to them. You need to pass the testID props down and down until it reaches a native component (e.g. <View>) which implements testID rendering as native accessibility identifiers in iOS and Android.
 
 ```jsx
 <TrendingMovies testID='OtherMovies'/>
@@ -38,12 +38,12 @@ Not all React Native components support testID prop, so you'll need to pass them
 - Generate testID for repetitive components
 
 ```jsx
-<View testID=`${props.title}ID`>
+<View testID= testID={props.testID + '.view'}>
     <Text>Some button</Text>
 </View>
   ```
 
-- Combine matchers for repetitive components
+- Combine matchers for repetitive components in case you can't generate a testID
 
 ```js
 element(by.id('child').withAncestor(by.id('parent')));
