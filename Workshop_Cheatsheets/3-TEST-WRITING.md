@@ -38,7 +38,7 @@ Custom React Native components are not aware of testIDs you pass to them. You ne
 - Generate testID for repetitive components
 
 ```jsx
-<View testID= testID={props.testID + '.view'}>
+<View testID={props.testID + '.view'}>
     <Text>Some button</Text>
 </View>
   ```
