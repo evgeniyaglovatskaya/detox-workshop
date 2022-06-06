@@ -25,7 +25,7 @@ const MoviesGallery = props => {
         <Loader />
       ) : (
         <View>
-          <Text style={Styles.heading}>{props.title}</Text>
+          <Text style={Styles.heading} testID='Title'>{props.title}</Text>
           <FlatList
             keyExtractor={item => item.id}
             data={movies}

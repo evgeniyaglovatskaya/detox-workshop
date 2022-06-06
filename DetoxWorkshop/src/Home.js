@@ -8,7 +8,7 @@ import YellowButton from './Components/YellowButton';
 
 const Home = props => {
   return (
-    <ScrollView style={Styles.sectionBg}>
+    <ScrollView style={Styles.sectionBg} testID="HomeScrollView">
       <DiscoverMovies navigation={props.navigation} />
       <YellowButton />
       <MoviesGallery
