@@ -3,7 +3,7 @@
 ## Add Detox to your project
 
 ```sh
-npm install detox --save-dev
+npm install detox -D
 ```
 
 ## Add jest
